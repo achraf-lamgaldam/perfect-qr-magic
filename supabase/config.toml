@@ -1,1 +1,4 @@
 project_id = "zmfrhwaxlzeivyzfdkjr"
+
+[functions.track-qr-scan]
+verify_jwt = false
