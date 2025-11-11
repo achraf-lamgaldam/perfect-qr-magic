@@ -2,11 +2,17 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Terms = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>Terms of Service - QR Master | User Agreement</title>
+        <meta name="description" content="Read our terms of service for QR Master. Understand permitted and prohibited uses, intellectual property rights, warranties, and service policies." />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
       
       <div className="flex-1 bg-background">
         <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -171,6 +177,7 @@ const Terms = () => {
       
       <Footer />
     </div>
+    </>
   );
 };
 

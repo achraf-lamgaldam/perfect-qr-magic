@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const features = [
@@ -50,8 +51,15 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>QR Code Generator - Create Free QR Codes Instantly</title>
+        <meta name="description" content="Generate QR codes for links, text, Wi-Fi, business cards and more. Free, fast and customizable QR code generator with instant download." />
+        <meta property="og:title" content="QR Code Generator - Create Free QR Codes Instantly" />
+        <meta property="og:description" content="Generate QR codes for links, text, Wi-Fi, business cards and more. Free, fast and customizable." />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-hero py-20 px-4 sm:px-6 lg:px-8">
@@ -160,6 +168,7 @@ const Home = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

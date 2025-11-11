@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { QrCode, Target, Users, Zap, Heart, Shield } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const values = [
@@ -28,8 +29,13 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>About Us - QR Master | Free QR Code Generator</title>
+        <meta name="description" content="Learn about QR Master's mission to provide free, easy-to-use QR code generation with privacy-focused features. Creating professional QR codes made simple." />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
       
       <div className="flex-1 bg-gradient-hero">
         <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -141,6 +147,7 @@ const About = () => {
       
       <Footer />
     </div>
+    </>
   );
 };
 

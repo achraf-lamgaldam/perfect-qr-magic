@@ -2,11 +2,17 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Privacy = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>Privacy Policy - QR Master | Your Data Protection</title>
+        <meta name="description" content="Read our privacy policy to understand how QR Master protects your data. Learn about local storage, analytics data collection, and your privacy rights." />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
       
       <div className="flex-1 bg-background">
         <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -139,6 +145,7 @@ const Privacy = () => {
       
       <Footer />
     </div>
+    </>
   );
 };
 

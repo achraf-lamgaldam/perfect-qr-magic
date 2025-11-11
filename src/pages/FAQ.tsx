@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { HelpCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const FAQ = () => {
   const faqs = [
@@ -65,8 +66,13 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>FAQ - Frequently Asked Questions | QR Code Generator</title>
+        <meta name="description" content="Find answers to common questions about QR code generation, customization, formats, tracking, and best practices. Learn about colors, logos, sizes and more." />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
       
       <div className="flex-1 bg-background">
         <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -113,6 +119,7 @@ const FAQ = () => {
       
       <Footer />
     </div>
+    </>
   );
 };
 

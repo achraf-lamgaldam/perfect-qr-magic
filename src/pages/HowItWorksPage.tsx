@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { QrCode, Upload, Palette, Download, BarChart3, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const HowItWorksPage = () => {
   const steps = [
@@ -40,8 +41,13 @@ const HowItWorksPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>How It Works - QR Code Generator Guide</title>
+        <meta name="description" content="Learn how to create professional QR codes in six simple steps. Choose content type, customize design, add logo, and download in multiple formats." />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
       
       <div className="flex-1 bg-gradient-hero">
         <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -110,6 +116,7 @@ const HowItWorksPage = () => {
       
       <Footer />
     </div>
+    </>
   );
 };
 

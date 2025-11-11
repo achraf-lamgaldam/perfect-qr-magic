@@ -9,6 +9,7 @@ import { Mail, MapPin, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
+import { Helmet } from "react-helmet-async";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
@@ -74,8 +75,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>Contact Us - Get in Touch | QR Code Generator</title>
+        <meta name="description" content="Have questions or feedback about our QR code generator? Contact us via email or send us a message. We'd love to hear from you." />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
       
       <div className="flex-1 bg-background">
         <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -225,6 +231,7 @@ const Contact = () => {
       
       <Footer />
     </div>
+    </>
   );
 };
 
