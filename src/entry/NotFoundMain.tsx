@@ -1,0 +1,10 @@
+import { createRoot } from "react-dom/client";
+import PageLayout from "@/components/PageLayout";
+import NotFound from "@/pages/NotFound";
+import "@/index.css"
+
+createRoot(document.getElementById("root")!).render(
+  <PageLayout>
+    <NotFound />
+  </PageLayout>
+);
