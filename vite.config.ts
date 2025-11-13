@@ -15,4 +15,19 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+        generator: path.resolve(__dirname, "generator.html"),
+        analytics: path.resolve(__dirname, "analytics.html"),
+        about: path.resolve(__dirname, "about.html"),
+        contact: path.resolve(__dirname, "contact.html"),
+        faq: path.resolve(__dirname, "faq.html"),
+        howitworks: path.resolve(__dirname, "how-it-works.html"),
+        privacy: path.resolve(__dirname, "privacy.html"),
+        terms: path.resolve(__dirname, "terms.html"),
+      },
+    },
+  },
 }));
